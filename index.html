@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Interactiva Negocios Internacionales</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>Negocios Internacionales - Malla Interactiva</h1>
+  <div class="malla">
+
+    <!-- 1er semestre -->
+    <div class="semestre">
+      <h2>1° Semestre</h2>
+      <div class="ramo" data-id="1">Introducción a los Negocios Internacionales</div>
+      <div class="ramo" data-id="2">Gestión de Organizaciones</div>
+      <div class="ramo" data-id="3">Informática para los Negocios</div>
+      <div class="ramo" data-id="4">Álgebra</div>
+      <div class="ramo" data-id="5">Política y Formación Ciudadana</div>
+      <div class="ramo" data-id="6">Autoconocimiento</div>
+      <div class="ramo" data-id="7">Habilidades Comunicacionales</div>
+    </div>
+
+    <!-- 2do semestre -->
+    <div class="semestre">
+      <h2>2° Semestre</h2>
+      <div class="ramo" data-id="8">Historia de las Relaciones Internacionales</div>
+      <div class="ramo" data-id="9">Geografía Política y Económica</div>
+      <div class="ramo" data-id="10">Psicología Social y Organizacional</div>
+      <div class="ramo" data-id="11">Sistemas de Información I</div>
+      <div class="ramo" data-id="12">Cálculo</div>
+      <div class="ramo" data-id="13">Inglés I</div>
+    </div>
+
+    <!-- 3er semestre -->
+    <div class="semestre">
+      <h2>3° Semestre</h2>
+      <div class="ramo bloqueado" data-id="14" data-prerreq="2">Personas y Organizaciones</div>
+      <div class="ramo" data-id="15">Marketing Estratégico</div>
+      <div class="ramo bloqueado" data-id="16" data-prerreq="12">Cálculo II</div>
+      <div class="ramo" data-id="17">Contabilidad Financiera</div>
+      <div class="ramo" data-id="18">Derecho Empresarial</div>
+      <div class="ramo" data-id="19">Inglés II</div>
+    </div>
+
+    <!-- 4to semestre -->
+    <div class="semestre">
+      <h2>4° Semestre</h2>
+      <div class="ramo bloqueado" data-id="20" data-prerreq="11,15">Simulación de Negocios</div>
+      <div class="ramo bloqueado" data-id="21" data-prerreq="15">Marketing Operativo</div>
+      <div class="ramo" data-id="22">Estadística para los Negocios</div>
+      <div class="ramo bloqueado" data-id="23" data-prerreq="17">Contabilidad Administrativa</div>
+      <div class="ramo bloqueado" data-id="24" data-prerreq="12">Microeconomía</div>
+      <div class="ramo" data-id="25">Inglés III</div>
+    </div>
+
+    <!-- 5° semestre -->
+    <div class="semestre">
+      <h2>5° Semestre</h2>
+      <div class="ramo bloqueado" data-id="26" data-prerreq="11">Sistemas de Información II</div>
+      <div class="ramo bloqueado" data-id="27" data-prerreq="22">Métodos Cuantitativos</div>
+      <div class="ramo bloqueado" data-id="28" data-prerreq="17,24">Gestión Financiera</div>
+      <div class="ramo" data-id="29">Comercio Internacional</div>
+      <div class="ramo" data-id="30">Taller Perfil UV 1</div>
+      <div class="ramo" data-id="31">Inglés IV</div>
+      <div class="ramo" data-id="32">Prácticas Intermedias</div>
+    </div>
+
+    <!-- 6° semestre -->
+    <div class="semestre">
+      <h2>6° Semestre</h2>
+      <div class="ramo" data-id="33">Teoría del Conflicto y Negociación</div>
+      <div class="ramo bloqueado" data-id="34" data-prerreq="27">Gestión de Operaciones</div>
+      <div class="ramo bloqueado" data-id="35" data-prerreq="24">Macroeconomía</div>
+      <div class="ramo bloqueado" data-id="36" data-prerreq="18">Derecho Comercial Internacional</div>
+      <div class="ramo" data-id="37">Gestión Aduanera y Documental</div>
+      <div class="ramo" data-id="38">Taller Perfil UV 2</div>
+      <div class="ramo" data-id="39">Academic Communicational English</div>
+    </div>
+
+    <!-- 7° semestre -->
+    <div class="semestre">
+      <h2>7° Semestre</h2>
+      <div class="ramo" data-id="40">Negociaciones Internacionales</div>
+      <div class="ramo bloqueado" data-id="41" data-prerreq="28">Finanzas Corporativas</div>
+      <div class="ramo bloqueado" data-id="42" data-prerreq="35,29">Economía Internacional</div>
+      <div class="ramo" data-id="43">Logística y Seguros Internac.</div>
+      <div class="ramo bloqueado" data-id="44" data-prerreq="22,27">Metodología de Investigación</div>
+      <div class="ramo" data-id="45">Taller Perfil UV 3</div>
+      <div class="ramo" data-id="46">English for International Management</div>
+    </div>
+
+    <!-- 8° semestre -->
+    <div class="semestre">
+      <h2>8° Semestre</h2>
+      <div class="ramo" data-id="47">Integración Comercial Internacional</div>
+      <div class="ramo bloqueado" data-id="48" data-prerreq="21">Marketing Internacional y Global</div>
+      <div class="ramo" data-id="49">Formulación y Evaluación de Proyectos</div>
+      <div class="ramo" data-id="50">Transporte y Distribución Internacional</div>
+      <div class="ramo" data-id="51">Gestión Bancaria Internacional</div>
+      <div class="ramo" data-id="52">English for Foreign Trade</div>
+      <div class="ramo bloqueado" data-id="53" data-prerreq="20">Simulación de Negocios II</div>
+    </div>
+
+    <!-- 9° semestre -->
+    <div class="semestre">
+      <h2>9° Semestre</h2>
+      <div class="ramo" data-id="54">Dirección y Gestión Internacional</div>
+      <div class="ramo bloqueado" data-id="55" data-prerreq="41">Finanzas Internacionales</div>
+      <div class="ramo" data-id="56">Análisis de Entorno y Coyuntura</div>
+      <div class="ramo" data-id="57">Formación Ciudadana Global</div>
+      <div class="ramo" data-id="58">Electivo de Actualización</div>
+      <div class="ramo" data-id="59">Curso I de Especialización</div>
+    </div>
+
+    <!-- 10° semestre -->
+    <div class="semestre">
+      <h2>10° Semestre</h2>
+      <div class="ramo" data-id="60">Práctica Profesional</div>
+      <div class="ramo" data-id="61">Seminario de Título</div>
+      <div class="ramo" data-id="62">Curso II de Especialización</div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
