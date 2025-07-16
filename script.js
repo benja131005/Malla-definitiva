@@ -1,36 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
   const ramos = document.querySelectorAll(".ramo");
 
-  ramos.forEach(ramo => {
-    ramo.addEventListener("click", () => {
-      if (ramo.classList.contains("bloqueado")) return;
-
-      ramo.classList.toggle("aprobado");
-      actualizarBloqueados();
-    });
-  });
+  function getAprobados() {
+    return Array.from(document.querySelectorAll(".ramo.aprobado"))
+      .map(r => r.dataset.id);
+  }
 
   function actualizarBloqueados() {
-    const aprobados = Array.from(document.querySelectorAll(".ramo.aprobado"))
-                           .map(r => r.dataset.id);
+    const aprobados = getAprobados();
 
     ramos.forEach(ramo => {
       const prerreq = ramo.dataset.prerreq;
-
       if (prerreq) {
         const requisitos = prerreq.split(",");
-        const cumplido = requisitos.every(req => aprobados.includes(req));
-
-        if (cumplido) {
+        const desbloqueado = requisitos.every(req => aprobados.includes(req));
+        if (desbloqueado) {
           ramo.classList.remove("bloqueado");
         } else {
-          ramo.classList.add("bloqueado");
-          ramo.classList.remove("aprobado");
+          if (!ramo.classList.contains("bloqueado")) {
+            ramo.classList.remove("aprobado");
+            ramo.classList.add("bloqueado");
+          }
         }
       }
     });
   }
 
-  // Inicial
+  ramos.forEach(ramo => {
+    if (!ramo.classList.contains("bloqueado")) {
+      ramo.addEventListener("click", () => {
+        ramo.classList.toggle("aprobado");
+        actualizarBloqueados();
+      });
+    }
+  });
+
   actualizarBloqueados();
 });
