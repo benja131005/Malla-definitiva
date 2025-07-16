@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (ramo.classList.contains("bloqueado")) return;
 
       ramo.classList.toggle("aprobado");
-
-      // Actualizar los ramos bloqueados
       actualizarBloqueados();
     });
   });
@@ -18,8 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ramos.forEach(ramo => {
       const prerreq = ramo.dataset.prerreq;
+
       if (prerreq) {
-        if (aprobados.includes(prerreq)) {
+        const requisitos = prerreq.split(",");
+        const cumplido = requisitos.every(req => aprobados.includes(req));
+
+        if (cumplido) {
           ramo.classList.remove("bloqueado");
         } else {
           ramo.classList.add("bloqueado");
