@@ -40,6 +40,7 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 14px;
+  user-select: none;
 }
 
 .ramo.aprobado {
